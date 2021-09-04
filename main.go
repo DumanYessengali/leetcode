@@ -22,6 +22,8 @@ func main() {
 	//fmt.Println(countGoodTriplets([]int{1,1,2,2,3}, 0, 0, 1))
 
 	//fmt.Println(canBeIncreasing([]int{512, 867, 904, 997, 403}))
-	fmt.Println(thirdMax([]int{1, 2, 3}))
+	//fmt.Println(thirdMax([]int{1, 2, 3}))
+
+	fmt.Println(findSpecialInteger([]int{1, 2, 2, 6, 6, 6, 6, 7, 10}))
 
 }
