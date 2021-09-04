@@ -24,6 +24,7 @@ func main() {
 	//fmt.Println(canBeIncreasing([]int{512, 867, 904, 997, 403}))
 	//fmt.Println(thirdMax([]int{1, 2, 3}))
 
-	fmt.Println(findSpecialInteger([]int{1, 2, 2, 6, 6, 6, 6, 7, 10}))
+	//fmt.Println(findSpecialInteger([]int{1, 2, 2, 6, 6, 6, 6, 7, 10}))
+	fmt.Println(countPrimes(3))
 
 }
