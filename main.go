@@ -30,5 +30,13 @@ func main() {
 	//fmt.Println(hasGroupsSizeX([]int{1, 1, 1, 2, 2, 2, 3, 3, 3}))
 	//fmt.Println(checkIfExist([]int{-2, 0, 10, -19, 4, 6, -8}))
 	//fmt.Println(containsNearbyDuplicate([]int{1,0,1,1},1))
-	fmt.Println(sumOfUnique([]int{1, 2, 3, 2}))
+	//fmt.Println(sumOfUnique([]int{1, 2, 3, 2}))
+	fmt.Println(diagonalSum([][]int{
+		{6, 3, 1, 10, 7, 4},
+		{4, 10, 1, 9, 5, 10},
+		{5, 5, 7, 3, 8, 5},
+		{2, 7, 6, 4, 7, 6},
+		{7, 9, 6, 1, 8, 5},
+		{1, 7, 9, 5, 8, 4},
+	}))
 }
