@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	//fmt.Println(getConcatenation([]int{1, 3, 2, 1}))
 
@@ -28,5 +26,6 @@ func main() {
 	//fmt.Println(countPrimes(3))
 
 	//fmt.Println(hasGroupsSizeX([]int{1, 1, 1, 2, 2, 2, 3, 3, 3}))
-	fmt.Println(checkIfExist([]int{-2, 0, 10, -19, 4, 6, -8}))
+	//fmt.Println(checkIfExist([]int{-2, 0, 10, -19, 4, 6, -8}))
+	//fmt.Println(containsNearbyDuplicate([]int{1,0,1,1},1))
 }
