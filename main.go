@@ -25,6 +25,8 @@ func main() {
 	//fmt.Println(thirdMax([]int{1, 2, 3}))
 
 	//fmt.Println(findSpecialInteger([]int{1, 2, 2, 6, 6, 6, 6, 7, 10}))
-	fmt.Println(countPrimes(3))
+	//fmt.Println(countPrimes(3))
 
+	//fmt.Println(hasGroupsSizeX([]int{1, 1, 1, 2, 2, 2, 3, 3, 3}))
+	fmt.Println(checkIfExist([]int{-2, 0, 10, -19, 4, 6, -8}))
 }
