@@ -39,5 +39,6 @@ func main() {
 	//	{7, 9, 6, 1, 8, 5},
 	//	{1, 7, 9, 5, 8, 4},
 	//}))
-	fmt.Println(findNumbers([]int{555, 901, 482, 1771}))
+	//fmt.Println(findNumbers([]int{555, 901, 482, 1771}))
+	fmt.Println(sumZero(4))
 }
