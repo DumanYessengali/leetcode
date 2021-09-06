@@ -40,5 +40,6 @@ func main() {
 	//	{1, 7, 9, 5, 8, 4},
 	//}))
 	//fmt.Println(findNumbers([]int{555, 901, 482, 1771}))
-	fmt.Println(sumZero(4))
+	//fmt.Println(sumZero(4))
+	fmt.Println(repeatedNTimes([]int{1, 2, 3, 3}))
 }
