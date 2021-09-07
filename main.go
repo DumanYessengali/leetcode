@@ -41,5 +41,7 @@ func main() {
 	//}))
 	//fmt.Println(findNumbers([]int{555, 901, 482, 1771}))
 	//fmt.Println(sumZero(4))
-	fmt.Println(repeatedNTimes([]int{1, 2, 3, 3}))
+	//fmt.Println(repeatedNTimes([]int{1, 2, 3, 3}))
+	//fmt.Println(sortByBits([]int{0, 1, 2, 3, 4, 5, 6, 7, 8}))
+	fmt.Println(slowestKey([]int{1, 2}, "ba"))
 }
