@@ -57,9 +57,6 @@ func main() {
 	//PrintList(link)
 	//
 	//PrintList(reverseList(link))
-	fmt.Println(canPlaceFlowers([]int{1, 0, 0, 0, 1}, 1))
-	fmt.Println(canPlaceFlowers([]int{1, 0, 1, 0, 0}, 1))
-	fmt.Println(canPlaceFlowers([]int{0, 0, 1, 0, 1}, 1))
-	fmt.Println(canPlaceFlowers([]int{1, 0, 1, 0, 1}, 1))
-
+	//fmt.Println(canPlaceFlowers([]int{1, 0, 0, 0, 1}, 1))
+	fmt.Println(validMountainArray([]int{2, 1}))
 }
