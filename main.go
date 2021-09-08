@@ -42,10 +42,24 @@ func main() {
 	//fmt.Println(findNumbers([]int{555, 901, 482, 1771}))
 	//fmt.Println(sumZero(4))
 	//fmt.Println(repeatedNTimes([]int{1, 2, 3, 3}))
-	fmt.Println(sortByBits([]int{0, 1, 2, 3, 4, 5, 6, 7, 8}))
+	//fmt.Println(sortByBits([]int{0, 1, 2, 3, 4, 5, 6, 7, 8}))
 	//fmt.Println(slowestKey([]int{1, 2}, "ba"))
 
 	//fmt.Println(changeToBits(422))
 
 	//fmt.Println(convertToInt("111"))
+
+	//var link *ListNode
+	//link = ListPushBack(link, 3)
+	//link = ListPushBack(link, 5)
+	//link = ListPushBack(link, 7)
+	//
+	//PrintList(link)
+	//
+	//PrintList(reverseList(link))
+	fmt.Println(canPlaceFlowers([]int{1, 0, 0, 0, 1}, 1))
+	fmt.Println(canPlaceFlowers([]int{1, 0, 1, 0, 0}, 1))
+	fmt.Println(canPlaceFlowers([]int{0, 0, 1, 0, 1}, 1))
+	fmt.Println(canPlaceFlowers([]int{1, 0, 1, 0, 1}, 1))
+
 }
