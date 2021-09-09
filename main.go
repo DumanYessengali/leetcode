@@ -64,5 +64,7 @@ func main() {
 	//fmt.Println(sortedSquares([]int{-4, -1, 0, 3, 10}))
 	//fmt.Println(isPalindrome("race a car"))
 
-	fmt.Println(isPowerOfTwo(-1))
+	//fmt.Println(isPowerOfTwo(-1))
+	//fmt.Println(lengthOfLastWord("Hello World"))
+	fmt.Println(isPowerOfFour(16))
 }
