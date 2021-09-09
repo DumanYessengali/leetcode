@@ -66,5 +66,6 @@ func main() {
 
 	//fmt.Println(isPowerOfTwo(-1))
 	//fmt.Println(lengthOfLastWord("Hello World"))
-	fmt.Println(isPowerOfFour(16))
+	//fmt.Println(isPowerOfFour(16))
+	fmt.Println(hammingWeight(0000000000000000000000000001011))
 }
