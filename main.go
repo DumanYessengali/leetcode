@@ -69,6 +69,8 @@ func main() {
 	//fmt.Println(isPowerOfFour(16))
 	//fmt.Println(hammingWeight(0000000000000000000000000001011))
 
-	fmt.Println(lengthOfLastWord("asdf sadf"))
+	//fmt.Println(lengthOfLastWord("asdf sadf"))
+
+	fmt.Println(numDifferentIntegers("0i00e"))
 
 }
