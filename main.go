@@ -71,6 +71,7 @@ func main() {
 
 	//fmt.Println(lengthOfLastWord("asdf sadf"))
 
-	fmt.Println(numDifferentIntegers("0i00e"))
+	//fmt.Println(numDifferentIntegers("0i00e"))
 
+	fmt.Println(strStr("a", ""))
 }
