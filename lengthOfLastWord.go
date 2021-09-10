@@ -1,13 +1,15 @@
 package main
 
 func lengthOfLastWord(s string) int {
-	//var arrStr []string
-	//num1, num2 := 0, 0
-	//for i, v1 := range s {
-	//	if v1 == 32 {
-	//
-	//	}
-	//}
-
-	return 0
+	var c int
+	for i := len(s) - 1; i >= 0; i-- {
+		if s[i] == 32 {
+			if c == 0 {
+				continue
+			}
+			break
+		}
+		c++
+	}
+	return c
 }
