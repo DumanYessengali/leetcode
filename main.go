@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	//fmt.Println(getConcatenation([]int{1, 3, 2, 1}))
 
@@ -74,5 +72,13 @@ func main() {
 	//fmt.Println(numDifferentIntegers("0i00e"))
 
 	//fmt.Println(strStr("a", ""))
-	fmt.Println(countSegments("                "))
+	//fmt.Println(countSegments("                "))
+	var link *ListNode
+	link = listPushBack(link, 5)
+	link = listPushBack(link, 2)
+	link = listPushBack(link, 4)
+	link = listPushBack(link, 1)
+	link = listPushBack(link, 6)
+	link = sortList(link)
+	Print(link)
 }
