@@ -73,5 +73,6 @@ func main() {
 
 	//fmt.Println(numDifferentIntegers("0i00e"))
 
-	fmt.Println(strStr("a", ""))
+	//fmt.Println(strStr("a", ""))
+	fmt.Println(countSegments("                "))
 }
