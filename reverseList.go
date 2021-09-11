@@ -7,8 +7,8 @@ type ListNode struct {
 }
 
 func reverseList(head *ListNode) *ListNode {
-	var prev *ListNode
 	var next *ListNode
+	var prev *ListNode
 	current := head
 
 	for current != nil {
