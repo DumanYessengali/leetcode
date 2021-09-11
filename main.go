@@ -74,11 +74,14 @@ func main() {
 	//fmt.Println(strStr("a", ""))
 	//fmt.Println(countSegments("                "))
 	var link *ListNode
-	link = listPushBack(link, 5)
+	link = listPushBack(link, 1)
 	link = listPushBack(link, 2)
 	link = listPushBack(link, 4)
-	link = listPushBack(link, 1)
-	link = listPushBack(link, 6)
-	link = sortList(link)
-	Print(link)
+	var link2 *ListNode
+	link2 = listPushBack(link2, 1)
+	link2 = listPushBack(link2, 3)
+	link2 = listPushBack(link2, 4)
+	list := mergeTwoLists(link, link2)
+
+	Print(list)
 }
