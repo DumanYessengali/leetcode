@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(checkPerfectNumber(6))
+	fmt.Println(uniqueMorseRepresentations([]string{"a"}))
 }
