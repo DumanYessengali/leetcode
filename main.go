@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	merge([]int{-1, 0, 0, 3, 3, 3, 0, 0, 0}, 6, []int{1, 2, 2}, 3)
+	fmt.Println(removeElement([]int{0, 1, 2, 2, 3, 0, 4, 2}, 2))
 }
