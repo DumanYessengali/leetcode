@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println(halvesAreAlike("textbook"))
+	duplicateZeros([]int{1, 0, 2, 3, 0, 4, 5, 0})
 }
