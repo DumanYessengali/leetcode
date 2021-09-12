@@ -1,5 +1,5 @@
 package main
 
 func main() {
-	duplicateZeros([]int{1, 0, 2, 3, 0, 4, 5, 0})
+	merge([]int{-1, 0, 0, 3, 3, 3, 0, 0, 0}, 6, []int{1, 2, 2}, 3)
 }
