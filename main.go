@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(uniqueMorseRepresentations([]string{"a"}))
+	fmt.Println(reverseWords("Let's take LeetCode contest"))
 }
