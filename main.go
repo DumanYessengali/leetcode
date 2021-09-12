@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(reverseWords1("  hello world  "))
+	fmt.Println(halvesAreAlike("textbook"))
 }
