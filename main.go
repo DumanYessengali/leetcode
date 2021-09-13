@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	moveZeroes([]int{1, 3, 12, 0, 0})
+	fmt.Println(removeDuplicates([]int{3, 2, 2, 3}))
 }
