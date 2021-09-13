@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(maxNumberOfBalloons("balllllllllllloooooooooon"))
+	fmt.Println(findDisappearedNumbers([]int{1, 1}))
 }
