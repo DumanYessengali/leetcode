@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	reverseString([]byte{'a', 'b', 'c', 'd', 'e'})
+	fmt.Println(reverseOnlyLetters("ab-cd"))
 }
