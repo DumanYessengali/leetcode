@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(addStrings("11", "123"))
-	fmt.Println(addStrings("456", "77"))
-	fmt.Println(addStrings("0", "0"))
+	fmt.Println(containsDuplicate([]int{1, 2, 3, 1}))
+	fmt.Println(containsDuplicate([]int{1, 2, 3, 4}))
+	fmt.Println(containsDuplicate([]int{1, 1, 1, 3, 3, 4, 3, 2, 4, 2}))
 
 }
