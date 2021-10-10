@@ -60,10 +60,12 @@ func intArrayToString(nums []int, i int, s string) string {
 }
 
 func toString(num int, s string) string {
-
 	if num > 0 {
 		s = s + string(rune('0'+num%10))
 		return toString(num/10, s)
+	}
+	if s == "" {
+		return "0"
 	}
 	return s
 }

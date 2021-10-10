@@ -1,8 +1,8 @@
 package main
 
 func divide(dividend int, divisor int) int {
-	if int(dividend/divisor) > 2147483648 {
-		return 2147483647
+	if -1<<31 == dividend && divisor == -1 {
+		return 1<<31 - 1
 	}
 	return int(dividend / divisor)
 }

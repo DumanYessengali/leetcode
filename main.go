@@ -1,12 +1,8 @@
 package main
 
-import "fmt"
-
 func main() {
-	//fmt.Println(isValid("[]"))
-	//fmt.Println(isValid("[{]"))
-	//fmt.Println(isValid("[{]}"))
-	fmt.Println(isValid("{[]}"))
-	//fmt.Println(isValid("[]{{}]"))
-
+	var link *ListNode
+	link = insert(link, 1)
+	link = insert(link, 1)
+	PrintList(deleteDuplicates(link))
 }
