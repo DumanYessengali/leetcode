@@ -1,13 +1,16 @@
 package main
 
 func myPow(x float64, n int) float64 {
-	sum := 1.00000
-	if n == 0 || x == sum {
-		return sum
+	if n == 0 {
+		return 1
 	}
 	if n < 0 {
-		return 1 / myPow(x, n-1)
+		n = -n
+		x = 1 / x
+	}
+	if n%2 == 0 {
+		return myPow(x*x, n/2)
 	} else {
-		return x * myPow(x, n-1)
+		return x * myPow(x*x, n/2)
 	}
 }

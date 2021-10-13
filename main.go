@@ -1,8 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	var link *ListNode
-	link = insert(link, 1)
-	link = insert(link, 1)
-	PrintList(deleteDuplicates(link))
+	fmt.Println(myPow(0.00001, 2147483647))
 }
