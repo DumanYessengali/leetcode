@@ -1,58 +1,61 @@
 package main
 
+import "fmt"
+
 func threeSum(nums []int) [][]int {
 	var arr [][]int
 
-	if len(nums) < 2 {
-		return arr
+	if len(nums) < 3 {
+		return [][]int{}
 	}
-	for i := 0; i < len(nums); i++ {
-		for j := i + 1; j < len(nums); j++ {
-			for k := j + 1; k < len(nums); k++ {
-				if nums[i]+nums[j]+nums[k] == 0 {
-					if nums[i] <= nums[j] && nums[j] <= nums[k] {
-						arr = append(arr, []int{nums[i], nums[j], nums[k]})
-					} else if nums[j] <= nums[i] && nums[i] <= nums[k] {
-						arr = append(arr, []int{nums[j], nums[i], nums[k]})
-					} else if nums[i] <= nums[k] && nums[k] <= nums[j] {
-						arr = append(arr, []int{nums[i], nums[k], nums[j]})
-					} else if nums[k] <= nums[i] && nums[i] <= nums[j] {
-						arr = append(arr, []int{nums[k], nums[i], nums[j]})
-					} else if nums[j] <= nums[k] && nums[k] <= nums[i] {
-						arr = append(arr, []int{nums[j], nums[k], nums[i]})
-					} else if nums[k] <= nums[j] && nums[j] <= nums[i] {
-						arr = append(arr, []int{nums[k], nums[j], nums[i]})
-					}
+	nums = sort(nums)
+	k := 0
+	j := len(nums) / 3
+	l := (len(nums) / 3) * 2
+	for l <= len(nums)-1 {
+		fmt.Println()
+		if nums[k]+nums[j]+nums[l] == 0 {
+
+			if len(arr) == 0 {
+				arr = append(arr, []int{nums[k], nums[j], nums[l]})
+			} else {
+				if checkArr(arr, []int{nums[k], nums[j], nums[l]}) {
+					arr = append(arr, []int{nums[k], nums[j], nums[l]})
 				}
 			}
 		}
+		if k < len(nums)/3-1 {
+			k++
+		} else {
+			if j < (len(nums)/3)*2-1 {
+				j++
+				k = 0
+			} else {
+				j = len(nums) / 3
+				l++
+			}
+		}
+
 	}
-	return normalize(arr)
+	return arr
 }
 
-func arrayEqual(a, b []int) bool {
-	for i := 0; i < len(a); i++ {
-		if a[i] != b[i] {
+func sort(arr []int) []int {
+	for i := len(arr); i > 0; i-- {
+		for j := 1; j < i; j++ {
+			if arr[j] < arr[j-1] {
+				arr[j], arr[j-1] = arr[j-1], arr[j]
+			}
+		}
+	}
+	return arr
+}
+
+func checkArr(arr [][]int, nums []int) bool {
+	for i := 0; i < len(arr); i++ {
+		if arr[i][0] == nums[0] && arr[i][1] == nums[1] && arr[i][2] == nums[2] {
 			return false
 		}
 	}
 	return true
-}
-
-func contains(array [][]int, item []int) bool {
-	for i := 0; i < len(array); i++ {
-		if arrayEqual(array[i], item) {
-			return true
-		}
-	}
-	return false
-}
-func normalize(array [][]int) [][]int {
-	var result [][]int
-	for i := 0; i < len(array); i++ {
-		if !contains(result, array[i]) {
-			result = append(result, array[i])
-		}
-	}
-	return result
 }
