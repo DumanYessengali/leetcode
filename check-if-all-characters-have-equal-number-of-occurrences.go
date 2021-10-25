@@ -2,7 +2,7 @@ package main
 
 func areOccurrencesEqual(s string) bool {
 	m := map[uint8]int{}
-	for i := range s {
+	for i := 0; i < len(s); i++ {
 		m[s[i]]++
 	}
 	k := m[s[0]]
