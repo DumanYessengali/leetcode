@@ -1,41 +1,29 @@
 package main
 
-import "fmt"
-
 func threeSum(nums []int) [][]int {
 	var arr [][]int
-
-	if len(nums) < 3 {
-		return [][]int{}
-	}
-	nums = sort(nums)
-	k := 0
-	j := len(nums) / 3
-	l := (len(nums) / 3) * 2
-	for l <= len(nums)-1 {
-		fmt.Println()
-		if nums[k]+nums[j]+nums[l] == 0 {
-
-			if len(arr) == 0 {
-				arr = append(arr, []int{nums[k], nums[j], nums[l]})
-			} else {
-				if checkArr(arr, []int{nums[k], nums[j], nums[l]}) {
-					arr = append(arr, []int{nums[k], nums[j], nums[l]})
+	sort(nums)
+	for i := 0; i < len(nums)-2; i++ {
+		if i == 0 || (i > 0 && nums[i] != nums[i-1]) {
+			l, h, sum := i+1, len(nums)-1, 0-nums[i]
+			for l < h {
+				if nums[l]+nums[h] == sum {
+					arr = append(arr, []int{nums[i], nums[l], nums[h]})
+					for l < h && nums[l] == nums[l+1] {
+						l++
+					}
+					for l < h && nums[h] == nums[h-1] {
+						h--
+					}
+					l++
+					h--
+				} else if nums[l]+nums[h] < sum {
+					l++
+				} else {
+					h--
 				}
 			}
 		}
-		if k < len(nums)/3-1 {
-			k++
-		} else {
-			if j < (len(nums)/3)*2-1 {
-				j++
-				k = 0
-			} else {
-				j = len(nums) / 3
-				l++
-			}
-		}
-
 	}
 	return arr
 }
@@ -49,13 +37,4 @@ func sort(arr []int) []int {
 		}
 	}
 	return arr
-}
-
-func checkArr(arr [][]int, nums []int) bool {
-	for i := 0; i < len(arr); i++ {
-		if arr[i][0] == nums[0] && arr[i][1] == nums[1] && arr[i][2] == nums[2] {
-			return false
-		}
-	}
-	return true
 }
