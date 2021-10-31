@@ -3,8 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(threeSumClosest([]int{0, 2, 1, -3}, 1))
-	fmt.Println(threeSumClosest([]int{0, 0, 0}, 1))
-	fmt.Println(threeSumClosest([]int{-1, 2, 1, -4}, 1))
-	fmt.Println(threeSumClosest([]int{1, 2, 4, 8, 16, 32, 64, 128}, 82))
+	fmt.Println(maxLengthBetweenEqualCharacters("a"))
+	fmt.Println(maxLengthBetweenEqualCharacters("aa"))
+	fmt.Println(maxLengthBetweenEqualCharacters("aaa"))
+	fmt.Println(maxLengthBetweenEqualCharacters("abca"))
+	fmt.Println(maxLengthBetweenEqualCharacters("cbzxy"))
+	fmt.Println(maxLengthBetweenEqualCharacters("cabbac"))
+	fmt.Println(maxLengthBetweenEqualCharacters("mgntdygtxrvxjnwksqhxuxtrv"))
 }
