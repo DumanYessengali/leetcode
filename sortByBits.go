@@ -1,77 +1,31 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
-
-func changeToBits(num int) string {
-	str := ""
-
-	for num > 0 {
-		if num%2 == 0 {
-			str += "0"
-		} else {
-			str += "1"
-		}
-		num /= 2
-	}
-
-	realStr := ""
-
-	for i := len(str) - 1; i >= 0; i-- {
-		realStr += string(str[i])
-	}
-
-	return realStr
-}
-
 func sortByBits(arr []int) []int {
-	arrMap := map[string]int{}
-	mapRep := map[int]int{}
-
-	for _, v1 := range arr {
-		n := changeToBits(v1)
-
-		arrMap[n] = func(n string) int {
-			k := 0
-			for _, v1 := range n {
-				if v1 == 49 {
-					k++
-				}
-			}
-			return k
-		}(n)
-
-		if mapRep[arrMap[n]] == 0 {
-			mapRep[arrMap[n]] = 1
-		} else {
-			mapRep[arrMap[n]] += 1
-		}
+	MyMap := map[int][]int{}
+	var nums1 []int
+	sort(arr)
+	for i := range arr {
+		k := oneBitNum(arr[i])
+		MyMap[k] = append(MyMap[k], arr[i])
 	}
-	fmt.Println(mapRep)
-	fmt.Println(arrMap)
-	newArr := make([][]int, len(mapRep))
 
-	for i, v1 := range mapRep {
-		for j := 0; j < v1; j++ {
-
-			for k, v3 := range arrMap {
-
-				if v3 == i {
-					newArr[i][j] = convertToInt(k)
-				}
-			}
-		}
+	for i := range MyMap {
+		nums1 = append(nums1, i)
 	}
-	fmt.Println(newArr)
-	return []int{}
+
+	sort(nums1)
+	var nums2 []int
+	for _, v1 := range nums1 {
+		nums2 = append(nums2, MyMap[v1]...)
+	}
+	return nums2
 }
 
-func convertToInt(k string) int {
-	sum := 0
-	for i := 0; i < len(k); i++ {
-		sum = sum + (int(k[i])-48)*int(math.Pow(2.0, float64(i)))
+func oneBitNum(num int) int {
+	var sum int
+	for num > 0 {
+		sum += num % 2
+		num /= 2
 	}
 	return sum
 }
