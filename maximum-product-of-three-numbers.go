@@ -8,5 +8,5 @@ func maximumProduct(nums []int) int {
 			}
 		}
 	}
-	return nums[0] * nums[1] * nums[2]
+	return max(nums[0]*nums[1]*nums[2], nums[len(nums)-1]*nums[len(nums)-2]*nums[0])
 }
