@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(replaceElements([]int{17, 18, 5, 4, 6, 1}))
-	//fmt.Println(oneBitNum(2))
+	fmt.Println(getLucky("iiii", 1))
+	fmt.Println(getLucky("leetcode", 2))
+	fmt.Println(getLucky("zbax", 2))
 }
