@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(multiply("123", "456"))
+	fmt.Println(minStartValue([]int{-3, 2, -3, 4, 2}))
 }
