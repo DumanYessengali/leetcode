@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(minStartValue([]int{-3, 2, -3, 4, 2}))
+	fmt.Println(findRelativeRanks([]int{10, 3, 8, 9, 4}))
 }
