@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(findRelativeRanks([]int{10, 3, 8, 9, 4}))
+	fmt.Println(findKthNumber(3, 3, 5))
 }
