@@ -1,7 +1,7 @@
 package main
 
 func sortedSquares(nums []int) []int {
-	for i, _ := range nums {
+	for i := range nums {
 		nums[i] *= nums[i]
 	}
 
