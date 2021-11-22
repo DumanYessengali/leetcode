@@ -1,29 +1,31 @@
 package main
 
-//func commonChars(words []string) []string {
-//	for i, v1 := range words {
-//		words[i] = sortByBytes([]byte(v1))
-//	}
-//	var letters []string
-//	word := words[0]
-//
-//	tf := false
-//	for i := 0; i < len(word)-1; i++ {
-//		k:=0
-//		for j := 1; j < len(words)-1; j++ {
-//			if wor
-//		}
-//	}
-//	return letters
-//}
+func commonChars(words []string) []string {
+	abc := make([]int, 26)
 
-func sortByBytes(arrB []byte) string {
-	for i := len(arrB); i > 0; i-- {
-		for j := 1; j < len(arrB); j++ {
-			if arrB[j-1] > arrB[j] {
-				arrB[j], arrB[j-1] = arrB[j-1], arrB[j]
+	countLetter(words[0], abc)
+	for i := 1; i < len(words); i++ {
+		abc2 := make([]int, 26)
+		countLetter(words[i], abc2)
+
+		for i, v1 := range abc {
+			if abc2[i] < v1 {
+				abc[i] = abc2[i]
 			}
 		}
 	}
-	return string(arrB)
+	var result []string
+	for i, v1 := range abc {
+		for v1 > 0 {
+			v1--
+			result = append(result, string('a'+i))
+		}
+	}
+	return result
+}
+
+func countLetter(str string, abc []int) {
+	for _, v1 := range str {
+		abc[v1-'a']++
+	}
 }
