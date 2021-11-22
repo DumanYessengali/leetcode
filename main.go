@@ -3,12 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var link *ListNode
-	link = listPushBack(link, 3)
-	link = listPushBack(link, 5)
-	link = listPushBack(link, 7)
-	link = listPushBack(link, 7)
-	link = listPushBack(link, 5)
-	link = listPushBack(link, 3)
-	fmt.Println(isPalindromeLinkedList(link))
+	fmt.Println(mergeIntervals([][]int{{1, 4}, {4, 5}}))
+	fmt.Println(mergeIntervals([][]int{{1, 4}, {0, 4}}))
+	fmt.Println(mergeIntervals([][]int{{1, 4}, {0, 0}}))
+	fmt.Println(mergeIntervals([][]int{{2, 3}, {4, 5}, {6, 7}, {8, 9}, {1, 10}}))
 }

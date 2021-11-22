@@ -1,18 +1,27 @@
 package main
 
-func mergeIntervals(intervals [][]int) [][]int {
-	var arr [][]int
-	if len(intervals) <= 1 {
-		return intervals
+func mergeIntervals(in [][]int) [][]int {
+	if len(in) <= 1 {
+		return in
 	}
-	for i := 1; i < len(intervals); i += 2 {
-		if intervals[i-1][1] >= intervals[i][0] && intervals[i][0] < intervals[i-1][0] {
-			arr = append(arr, []int{intervals[i-1][0], intervals[i][1]})
-		} else if intervals[i-1][1] >= intervals[i][0] && intervals[i][0] > intervals[i-1][0] {
-			arr = append(arr, []int{min(intervals[i][0], intervals[i-1][0]), intervals[i][1]})
+	for i := len(in); i > 0; i-- {
+		for j := 1; j < i; j++ {
+			if in[j][0] < in[j-1][0] {
+				in[j], in[j-1] = in[j-1], in[j]
+			}
+		}
+	}
+	arr := append([][]int{}, in[0])
+	for i := 1; i < len(in); i++ {
+		l := len(arr) - 1
+		if arr[l][1] >= in[i][0] && (arr[l][0] <= in[i][0] || arr[l][1] <= in[i][1] || arr[l][0] <= in[i][1]) {
+			arr[l][1] = max(in[i][1], arr[l][1])
+			arr[l][0] = min(in[i][0], arr[l][0])
 		} else {
-			arr = append(arr, intervals[i-1])
-			arr = append(arr, intervals[i])
+			arr = append(arr, in[i])
+			if arr[l][1] < arr[len(arr)-2][0] {
+				arr[l], arr[len(arr)-2] = arr[len(arr)-2], arr[l]
+			}
 		}
 	}
 	return arr
