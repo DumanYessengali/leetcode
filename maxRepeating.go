@@ -1,17 +1,20 @@
 package main
 
-func maxRepeating(sequence string, word string) int {
-	if len(word) == 0 {
-		return 0
-	} else if sequence == word {
-		return 1
-	}
-	k := 0
-	for i := 0; i < len(sequence); i++ {
-		if len(sequence[i:]) >= len(word) && sequence[i:i+len(word)] == word {
-			k++
-			i += len(word) - 1
+func maxRepeating(seq string, word string) int {
+	var mx, cur int
+	wl := len(word)
+	for i := 0; i <= len(seq)-wl; i++ {
+		if seq[i:i+wl] == word {
+			cur++
+			i += wl - 1
+		} else {
+			i -= cur * wl
+			cur = 0
+
+		}
+		if cur > mx {
+			mx = cur
 		}
 	}
-	return k
+	return mx
 }
