@@ -3,8 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(mergeIntervals([][]int{{1, 4}, {4, 5}}))
-	fmt.Println(mergeIntervals([][]int{{1, 4}, {0, 4}}))
-	fmt.Println(mergeIntervals([][]int{{1, 4}, {0, 0}}))
-	fmt.Println(mergeIntervals([][]int{{2, 3}, {4, 5}, {6, 7}, {8, 9}, {1, 10}}))
+	fmt.Println(intervalIntersection([][]int{{0, 2}, {5, 10}, {13, 23}, {24, 25}}, [][]int{{1, 5}, {8, 12}, {15, 24}, {25, 26}}))
 }
