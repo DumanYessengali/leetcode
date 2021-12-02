@@ -1,15 +1,13 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println(convert("PAYPALISHIRING", 1))
-	//fmt.Println(convert("PAYPALISHIRING", 2))
-	//fmt.Println(convert("PAYPALISHIRING", 3))
-	//fmt.Println(convert("PAYPALISHIRING", 4))
-	//fmt.Println(convert("PAYPALISHIRING", 5))
-	//fmt.Println(convert("PAYPALISHIRING", 6))
-	//fmt.Println(convert("PAYPALISHIRING", 7))
-	//fmt.Println(convert("PAYPALISHIRING", 14))
-	//fmt.Println(convert("PAYPALISHIRING", 15))
+	var link *ListNode
+	link = listPushBack(link, 1)
+	link = listPushBack(link, 2)
+	link = listPushBack(link, 3)
+	link = listPushBack(link, 4)
+	link = listPushBack(link, 5)
+	link = oddEvenList(link)
+	PrintList(link)
+
 }
