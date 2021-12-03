@@ -1,7 +1,19 @@
 package main
 
 func maxProduct(nums []int) int {
-	return (mergeS(nums)[len(nums)-1] - 1) * (mergeS(nums)[len(nums)-2] - 1)
+	minV, maxV, maxP := nums[0], nums[0], nums[0]
+	n := len(nums)
+	for i := 1; i < n; i++ {
+		if nums[i] < 0 {
+			minV, maxV = maxV, minV
+		}
+		minV = min(nums[i], nums[i]*minV)
+		maxV = max(nums[i], nums[i]*maxV)
+		if maxV > maxP {
+			maxP = maxV
+		}
+	}
+	return maxP
 }
 
 func mergeS(items []int) []int {
