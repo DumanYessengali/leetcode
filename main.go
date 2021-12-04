@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println(maxProduct([]int{2, 3, -2, 3, 4, 3, -4, 4, 4, 4}))
+	var link *ListNode
+	link = listPushBack(link, 1)
+	link = listPushBack(link, 2)
+	link = listPushBack(link, 3)
+	link = listPushBack(link, 4)
+	link = listPushBack(link, 5)
+
+	link = removeNthFromEnd(link, 2)
+	PrintList(link)
 }
