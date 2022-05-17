@@ -1,13 +1,11 @@
 package main
 
 func main() {
-	var link *ListNode
-	link = listPushBack(link, 1)
-	link = listPushBack(link, 2)
-	link = listPushBack(link, 3)
-	link = listPushBack(link, 4)
-	link = listPushBack(link, 5)
+	var list *ListNode
+	list = listPushBack(list, 1)
+	list = listPushBack(list, 2)
+	//list = listPushBack(list, 3)
+	//list = listPushBack(list, 4)
 
-	link = removeNthFromEnd(link, 2)
-	PrintList(link)
+	PrintList(swapPairs(list))
 }
