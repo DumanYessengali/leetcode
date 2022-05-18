@@ -1,11 +1,12 @@
 package main
 
-func main() {
-	var list *ListNode
-	list = listPushBack(list, 1)
-	list = listPushBack(list, 2)
-	//list = listPushBack(list, 3)
-	//list = listPushBack(list, 4)
+import "fmt"
 
-	PrintList(swapPairs(list))
+func main() {
+	root := &TreeNode{Val: 4}
+	BTreeInsertData(root, 2)
+	BTreeInsertData(root, 7)
+	BTreeInsertData(root, 1)
+	BTreeInsertData(root, 3)
+	BTreeApplyInorder(searchBST(root, 2), fmt.Println)
 }
