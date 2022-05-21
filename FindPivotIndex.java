@@ -7,7 +7,7 @@ public class FindPivotIndex {
         return pivotIndexRec(sum,0,0,nums);
     }
 
-    public int pivotIndexRec(int sum, int leftSum, int i, int[] nums) {
+    public static int pivotIndexRec(int sum, int leftSum, int i, int[] nums) {
         if (i < nums.length) {
             sum -= nums[i];
             if (sum == leftSum) {
