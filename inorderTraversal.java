@@ -36,4 +36,12 @@ class TreeNode {
         this.left = left;
         this.right = right;
     }
+    public static void print(TreeNode root) {
+        if (root == null) return;
+
+        print(root.left);
+        System.out.println(root.val);
+
+        print(root.right);
+    }
 }
